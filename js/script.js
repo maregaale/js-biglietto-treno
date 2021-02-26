@@ -1,9 +1,15 @@
 // richiesta km da percorrere
 var chilometri = parseInt(prompt("Inserisci i chilometri che intendi percorrere"));
-
+if ( isNaN ( chilometri)) {
+  alert("aggiorna la pagina ed inserisci dati numerici");
+}
 // richiesta eta del passeggero
 var eta = parseInt(prompt("Inserisci la tua eta\'"));
 
+// controllo input utente
+if ( isNaN ( eta)) {
+  alert("aggiorna la pagina ed inserisci dati numerici");
+}
 // prezzi
 var prezzoNonScontato = chilometri * 0.21;
 
