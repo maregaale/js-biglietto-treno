@@ -1,15 +1,9 @@
 // richiesta km da percorrere
 var chilometri = parseInt(prompt("Inserisci i chilometri che intendi percorrere"));
-if ( isNaN ( chilometri)) {
-  alert("aggiorna la pagina ed inserisci dati numerici");
-}
+
 // richiesta eta del passeggero
 var eta = parseInt(prompt("Inserisci la tua eta\'"));
 
-// controllo input utente
-if ( isNaN ( eta)) {
-  alert("aggiorna la pagina ed inserisci dati numerici");
-}
 // prezzi
 var prezzoNonScontato = chilometri * 0.21;
 
@@ -17,8 +11,10 @@ var prezzoMinorenni = prezzoNonScontato - ((prezzoNonScontato / 100) * 20);
 
 var prezzoOver65 = prezzoNonScontato - ((prezzoNonScontato / 100) * 40);
 
-// prezzo totale del viaggio
-if ( eta < 18 ) {
+// prezzo totale del viaggio con controllo input utente
+if ( isNaN ( chilometri && eta)) {
+  alert("aggiorna la pagina ed inserisci dati numerici");
+} else if  ( eta < 18 ) {
   alert("Il prezzo del tuo biglietto e\' di " + prezzoMinorenni + "\u20AC");
 } else if ( eta >= 18 && eta < 65 ) {
   alert("Il prezzo del tuo biglietto e\' di " + prezzoNonScontato + "\u20AC");
