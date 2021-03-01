@@ -12,7 +12,7 @@ var prezzoMinorenni = prezzoNonScontato - ((prezzoNonScontato / 100) * 20);
 var prezzoOver65 = prezzoNonScontato - ((prezzoNonScontato / 100) * 40);
 
 // prezzo totale del viaggio con controllo input utente
-if ( isNaN ( chilometri && eta)) {
+if ( isNaN(chilometri && eta)) {
   alert("aggiorna la pagina ed inserisci dati numerici");
 } else if  ( eta < 18 ) {
   alert("Il prezzo del tuo biglietto e\' di " + prezzoMinorenni + "\u20AC");
